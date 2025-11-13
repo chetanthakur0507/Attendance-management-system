@@ -1,137 +1,93 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Student Attendance Management System — README</title>
-  <style>
-    body{font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif, "Apple Color Emoji","Segoe UI Emoji";line-height:1.6;color:#24292e;background:#f6f8fa;padding:32px}
-    .container{max-width:900px;margin:0 auto;background:#fff;border:1px solid #e1e4e8;border-radius:6px;padding:28px;box-shadow:0 1px 3px rgba(27,31,35,0.04)}
-    h1,h2,h3{color:#0366d6;margin-top:0}
-    pre{background:#f6f8fa;border:1px solid #e1e4e8;padding:12px;border-radius:6px;overflow:auto}
-    code{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;background:#f6f8fa;padding:2px 6px;border-radius:6px}
-    ul{margin-top:0}
-    .meta{font-size:0.95rem;color:#586069}
-    .features li{margin-bottom:6px}
-    .section{margin-top:18px}
-    .btn-copy{display:inline-block;margin-top:8px;padding:6px 10px;border-radius:6px;border:1px solid #e1e4e8;background:#fafbfc;font-size:0.9rem}
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Student Attendance Management System</h1>
-    <p class="meta">A comprehensive Java-based application for managing student attendance records with a menu-driven interface.</p>
+# Student Attendance Management System
 
-    <div class="section">
-      <h2>Features</h2>
-      <ul class="features">
-        <li><strong>Student Management</strong>
-          <ul>
-            <li>Add new students with ID, name, email, and course</li>
-            <li>View all registered students</li>
-            <li>Update student information</li>
-            <li>Delete students</li>
-          </ul>
-        </li>
-        <li><strong>Attendance Management</strong>
-          <ul>
-            <li>Mark attendance for students (Present, Absent, Late)</li>
-            <li>View all attendance records</li>
-            <li>View attendance history for a specific student</li>
-            <li>Generate attendance reports for specific dates</li>
-            <li>Add remarks to attendance records</li>
-          </ul>
-        </li>
-        <li><strong>Reports</strong>
-          <ul>
-            <li>Individual student attendance summary with percentage</li>
-            <li>Date-wise attendance reports</li>
-            <li>Statistics (Present, Absent, Late counts)</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+A comprehensive Java-based application for managing student attendance records with a menu-driven interface.
 
-    <div class="section">
-      <h2>Project Structure</h2>
-      <pre><code>news/
+## Features
+
+- **Student Management**
+  - Add new students with ID, name, email, and course
+  - View all registered students
+  - Update student information
+  - Delete students
+
+- **Attendance Management**
+  - Mark attendance for students (Present, Absent, Late)
+  - View all attendance records
+  - View attendance history for a specific student
+  - Generate attendance reports for specific dates
+  - Add remarks to attendance records
+
+- **Reports**
+  - Individual student attendance summary with percentage
+  - Date-wise attendance reports
+  - Statistics (Present, Absent, Late counts)
+
+## Project Structure
+
+```
+news/
 ├── src/
 │   ├── Student.java                    # Student entity class
 │   ├── AttendanceRecord.java           # Attendance record entity class
 │   └── AttendanceManagementSystem.java # Main application class
 └── README.md                           # Project documentation
-</code></pre>
-    </div>
+```
 
-    <div class="section">
-      <h2>Requirements</h2>
-      <ul>
-        <li>Java Development Kit (JDK) 8 or higher</li>
-        <li>No external dependencies required (uses only Java standard library)</li>
-      </ul>
-    </div>
+## Requirements
 
-    <div class="section">
-      <h2>How to Compile and Run</h2>
-      <h3>Compile the project:</h3>
-      <pre><code>javac src/*.java</code></pre>
-      <h3>Run the application:</h3>
-      <pre><code>java -cp src AttendanceManagementSystem</code></pre>
-    </div>
+- Java Development Kit (JDK) 8 or higher
+- No external dependencies required (uses only Java standard library)
 
-    <div class="section">
-      <h2>Usage Guide</h2>
-      <ol>
-        <li><strong>Add Student</strong>: Register a new student with their details</li>
-        <li><strong>View All Students</strong>: Display all registered students</li>
-        <li><strong>Mark Attendance</strong>: Record attendance for a student on a specific date</li>
-        <li><strong>View Attendance Records</strong>: See all attendance records</li>
-        <li><strong>View Student Attendance</strong>: Check attendance history and statistics for a specific student</li>
-        <li><strong>Generate Attendance Report</strong>: Get a report of attendance for a specific date</li>
-        <li><strong>Update Student</strong>: Modify student information</li>
-        <li><strong>Delete Student</strong>: Remove a student and their attendance records</li>
-      </ol>
-    </div>
+## How to Compile and Run
 
-    <div class="section">
-      <h2>Example Workflow</h2>
-      <ol>
-        <li>Add students to the system</li>
-        <li>Mark daily attendance for students</li>
-        <li>View individual student attendance statistics</li>
-        <li>Generate reports for specific dates</li>
-        <li>Update student information as needed</li>
-      </ol>
-    </div>
+### Compile the project:
 
-    <div class="section">
-      <h2>Notes</h2>
-      <ul>
-        <li>Student IDs must be unique</li>
-        <li>Date format: <code>YYYY-MM-DD</code> (e.g., 2024-01-15)</li>
-        <li>Attendance statuses: <em>Present</em>, <em>Absent</em>, <em>Late</em></li>
-        <li>All data is stored in memory (not persisted to disk)</li>
-      </ul>
-    </div>
+```bash
+javac src/*.java
+```
 
-    <div class="section">
-      <h2>Future Enhancements</h2>
-      <ul>
-        <li>Database integration for data persistence</li>
-        <li>Export reports to CSV/PDF</li>
-        <li>Email notifications</li>
-        <li>User authentication</li>
-        <li>Web-based interface</li>
-        <li>Batch attendance marking</li>
-      </ul>
-    </div>
+### Run the application:
 
-    <div class="section">
-      <h2>Author</h2>
-      <p>Created as a Java project for student attendance management.</p>
+```bash
+java -cp src AttendanceManagementSystem
+```
 
-      <p style="margin-top:18px;color:#586069;font-size:0.95rem">Notes for GitHub: You can save this file as <code>README.html</code> in your repository or copy the relevant HTML into your repo's documentation. GitHub will render HTML files when opened directly in the browser, but the repository's default README shown on the repo home is still <code>README.md</code>. If you want to keep both, consider keeping <code>README.md</code> for the repo front page and linking to this <code>README.html</code> from it.</p>
-    </div>
-  </div>
-</body>
-</html>
+## Usage Guide
+
+1. **Add Student**: Register a new student with their details
+2. **View All Students**: Display all registered students
+3. **Mark Attendance**: Record attendance for a student on a specific date
+4. **View Attendance Records**: See all attendance records
+5. **View Student Attendance**: Check attendance history and statistics for a specific student
+6. **Generate Attendance Report**: Get a report of attendance for a specific date
+7. **Update Student**: Modify student information
+8. **Delete Student**: Remove a student and their attendance records
+
+## Example Workflow
+
+1. Add students to the system
+2. Mark daily attendance for students
+3. View individual student attendance statistics
+4. Generate reports for specific dates
+5. Update student information as needed
+
+## Notes
+
+- Student IDs must be unique
+- Date format: YYYY-MM-DD (e.g., 2024-01-15)
+- Attendance statuses: Present, Absent, Late
+- All data is stored in memory (not persisted to disk)
+
+## Future Enhancements
+
+- Database integration for data persistence
+- Export reports to CSV/PDF
+- Email notifications
+- User authentication
+- Web-based interface
+- Batch attendance marking
+
+## Author
+
+Created as a Java project for student attendance management.
+#
